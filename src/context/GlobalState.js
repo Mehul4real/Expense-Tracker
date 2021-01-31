@@ -2,9 +2,8 @@ import React,{createContext, useReducer} from "react";
 import AppReducer from './AppReducer'
 //initial state 
 let initialList= JSON.parse(localStorage.getItem("transactions"))
-
 const initialState={
-    transactions: initialList.transactions
+    transactions: (initialList)?initialList.transactions:[]
         
 }
 
